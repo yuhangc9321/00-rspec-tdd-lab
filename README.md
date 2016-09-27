@@ -20,7 +20,7 @@ The basic idea behind TDD is that you should think about what you want your prog
 
 #### How Does TDD Work?
 
-Once again, you won't be writing your own tests for a while, so we'll only touch on this process briefly. Conceptually, TDD is simple:
+Conceptually, TDD is simple:
 
 * First, write the test for a specific function of your code. 
 * *Then*, write the code to make the test pass. 
@@ -47,13 +47,13 @@ If the year is currently 2016 and I was born in 1984, when I call the method `cu
 
 #### Coding Our Test
 
-In an ideal world, I could code this requirement with something like:
+In pseudocode, this requirement would look something like:
 
 ```
 I expect the method current_age_for_birth_year(1984) to return 32
 ```
 
-Unfortunately, we don't live in an ideal world. Fortunately, we have the RSpec Testing Framework.
+Unfortunately, pseudocode isn't real code. Fortunately, we have the RSpec Testing Framework.
 
 The [RSpec Testing Framework](http://rspec.info/) is a ruby library designed to allow programmers to describe the behavior and outcomes of their programs in a very natural language similar to the above example. 
 
@@ -81,7 +81,7 @@ and our actual program and solution will be in a file:
 
 `current_age_for_birth_year.rb`.
 
-When we run our test program, `spec/current_age_for_birth_year_spec.rb`, that code will load the code in `current_age_for_birth_year.rb` and try to execute `current_age_for_birth_year(1984)` with the expectation that it returns `32`. If so, the test will pass. Anything else will make it fail.
+When we run our test program, `spec/current_age_for_birth_year_spec.rb`, that code will load the code inside of `current_age_for_birth_year.rb` and try to execute `current_age_for_birth_year(1984)` with the expectation that it returns `32`. If so, the test will pass. Anything else will make it fail.
 
 File: `spec/current_age_for_birth_year_spec.rb`
 

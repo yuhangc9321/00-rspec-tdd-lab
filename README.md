@@ -355,7 +355,7 @@ users_age = current_age_for_birth_year(birth_year)
 puts "You are: " + users_age.to_s + " years old."
 ```
 
-Run this program with `ruby how_old_are_you.rb`. There shouldn't be any errors if you copied all the code from the tutorial but if there are, just read them and try to debug them or ask for help on Learn.
+Run this program with `ruby how_old_are_you.rb`. There shouldn't be any errors if you copied all the code from the tutorial but if there are, just read them and try to debug them.
 
 What this program does is load the code in our original program `current_age_for_birth_year.rb`. It then prints the string `"What year were you born?"`. It prompts the user for input via the `gets` method and converts the input to an integer with `to_i`.
 

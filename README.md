@@ -1,20 +1,20 @@
-## Intro to TDD, RSpec, and Learn
+## Intro to TDD with RSpec
 
 ## Objectives
 
 1. Define the purpose of a code test.
 2. Read the RSpec tests.
-3. Run tests via the `learn` command.
+3. Run tests via the `rspec` command.
 4. Understand test output.
 5. Write code to make test pass.
 
 ### What's a Test?
 
-Tests verify that the code you write behaves and produces the desired result. Many of the labs you will complete on Learn use tests. It can feel like an abstract concept at first, but it's worth starting to understand. Doing so will help you be more productive on Learn. Beyond that, understanding testing is important because **test-driven development**, or TDD, is considered the most reliable methodology for delivering quality code.
+Tests verify that the code you write behaves and produces the desired result. Many of the labs you will complete use tests. It can feel like an abstract concept at first, but it's worth starting to understand. Doing so will help you be more productive. Beyond that, understanding testing is important because **test-driven development**, or TDD, is considered the most reliable methodology for delivering quality code.
 
 #### What is TDD?
 
-Test-driven development is a big topic and you're not going to be writing your own tests for a while. It is an important concept though, so we'll touch on it briefly here. 
+Test-driven development is a big topic and you're not going to be writing your own tests for a while (if at all). It is an important concept though, so we'll touch on it briefly here. 
 
 The basic idea behind TDD is that you should think about what you want your program to do and how you want your code to behave *before* you start coding. Especially as you begin to write more complex programs or develop applications, bringing this mindfulness to your development process will help you to write code that is robust (doesn't break all the time), flexible (accommodates future change and growth) and easy for other developers to understand. 
 
@@ -55,15 +55,15 @@ I expect the method current_age_for_birth_year(1984) to return 32
 
 Unfortunately, we don't live in an ideal world. Fortunately, we have the RSpec Testing Framework.
 
-The [RSpec Testing Framework](http://rspec.info/) is a ruby library designed to allow programmers to describe the behavior and outcomes of their programs in a very natural language similar to the above example. Lots of Ruby and Ruby on Rails labs on Learn include RSpec tests. 
+The [RSpec Testing Framework](http://rspec.info/) is a ruby library designed to allow programmers to describe the behavior and outcomes of their programs in a very natural language similar to the above example. 
 
 Let's learn a bit about RSpec.
 
 #### Understanding the Test in the `spec` Directory
 
-If you haven't already, fork this lab and clone it down onto your machine. 
+If you haven't already, fork this lab and clone it down into the proper directory. 
 
-** Remember, at this point all we want you to be able to do is understand testing at a high level. The idea is that labs come with expectations for how your code should behave and you write the code to make those tests pass. **
+** Remember, at this point all you need to be able to do is understand testing at a high level. The idea is that labs come with expectations for how your code should behave and you write the code to make those tests pass. **
 
 Let's take a peek inside:
 
@@ -169,19 +169,19 @@ There are many kinds of tests, and test-driven development and RSpec are very co
 
 ### Running Our Tests
 
-Now that we can read our test code in our `*_spec.rb` file, let's actually run the tests. We're going to execute our test program, which is going to load our real program; try to use it in a certain manner we defined in our tests and report on the results. To do all this, simply run the `learn` command in your terminal.
+Now that we can read our test code in our `*_spec.rb` file, let's actually run the tests. We're going to execute our test program, which is going to load our real program; try to use it in a certain manner we defined in our tests and report on the results. To do all this, simply run the `rspec` command in your terminal.
 
-The `learn` command loads RSpec to run the tests. RSpec will automatically look in a directory called `spec` and try to execute all files ending in `_spec.rb`. So you type in `learn`, RSpec is loaded, RSpec finds the file `spec/current_age_for_birth_year_spec.rb`, and it executes that code.  
+The `rspec` command loads RSpec to run the tests. RSpec will automatically look in a directory called `spec` and try to execute all files ending in `_spec.rb`. So you type in `rspec`, RSpec is loaded, RSpec finds the file `spec/current_age_for_birth_year_spec.rb`, and it executes that code.  
 
 RSpec is just Ruby, so everything in our test file `spec/current_age_for_birth_year_spec.rb` must be valid Ruby.
 
-So, once again, to run your tests, go into your terminal and type `learn` in this lab's directory.
+So, once again, to run your tests, go into your terminal and type `rspec` in this lab's directory.
 
 #### Understanding Test Output
 
-When you run the tests with the `learn` command you're going to see the results of the test in your console. RSpec will report on what is working and what is broken and why. 
+When you run the tests with the `rspec` command you're going to see the results of the test in your console. RSpec will report on what is working and what is broken and why. 
 
-When you run this lab's test suite with `learn`, before writing any solution code in `current_age_for_birth_year.rb`, you'll see output similar to:
+When you run this lab's test suite with `rspec`, before writing any solution code in `current_age_for_birth_year.rb`, you'll see output similar to:
 
 ```bash
 current_age_for_birth_year method
@@ -267,7 +267,7 @@ def current_age_for_birth_year
 end
 ```
 
-Save the file and go back to your terminal and run the `learn` command. You'll see output including:
+Save the file and go back to your terminal and run the `rspec` command. You'll see output including:
 
 ```bash
   1) current_age_for_birth_year method returns the age of a person based on the year of birth
@@ -295,7 +295,7 @@ end
 
 There we define the method `current_age_for_birth_year` to accept an argument and name that argument `birth_year`. The method does nothing else.
 
-Run `learn` again and your failures should resemble:
+Run `rspec` again and your failures should resemble:
 
 ```
   1) current_age_for_birth_year method returns the age of a person based on the year of birth
@@ -320,9 +320,7 @@ def current_age_for_birth_year(birth_year)
 end
 ```
 
-Run `learn` again and you should see the test suite passing. Great job!
-
-At this point, you can submit your solution with `learn submit`
+Run `rspec` again and you should see the test suite passing. You're done! Great job!
 
 After you finish, here's some more to think about:
 
@@ -404,9 +402,3 @@ Remember, for now, you are not being asked to write your own tests. The importan
 
 ## Resources
 [Tutsplus -  RSpec Testing for Beginners](http://code.tutsplus.com/articles/rspec-testing-for-beginners-part-1--cms-26716)
-
-<a href='https://learn.co/lessons/intro-to-tdd-rspec-and-learn' data-visibility='hidden'>View this lesson on Learn.co</a>
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/intro-to-tdd-rspec-and-learn'>TDD, Rspec, and Learn </a> on Learn.co and start learning to code for free.</p>
-
-<p class='util--hide'>View <a href='https://learn.co/lessons/intro-to-tdd-rspec-and-learn'>TDD, Rspec, and Learn </a> on Learn.co and start learning to code for free.</p>
